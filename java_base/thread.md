@@ -46,3 +46,5 @@ jdk6之前，使用操作系统的互斥锁实现，用户态切换到内核态�
 ## 和synchronized 相比，reentrantLock有什么不同
 synchronized基于对象头实现，reentrantLock实现Lock接口，底层基于aqs框架实现，可以指定公平与非公平
 
+
+## aqs框架实现原理
