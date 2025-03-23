@@ -27,5 +27,10 @@
             <version>4.13.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.8.0</version> <!-- 推荐使用稳定版本 -->
+        </dependency>
     </dependencies>
 </project>
