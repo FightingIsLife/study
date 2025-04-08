@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user1" class="com.jrymos.spring.ioc.bean.User">
+        <constructor-arg value="1" type="java.lang.Integer" index="0"/>
+        <constructor-arg value="刘一" type="java.lang.String" index="1"/>
+    </bean>
+
+    <bean id="user2" class="com.jrymos.spring.ioc.bean.User">
+        <constructor-arg value="2" index="0"/>
+        <constructor-arg value="赵二" index="1"/>
+    </bean>
+
+    <bean id="user3" class="com.jrymos.spring.ioc.bean.User">
+        <constructor-arg value="张三" type="java.lang.String"/>
+        <constructor-arg value="3" type="java.lang.Integer"/>
+    </bean>
+
+    <bean id="user4" class="com.jrymos.spring.ioc.bean.User">
+        <constructor-arg value="4"/>
+        <constructor-arg value="李四"/>
+    </bean>
+
+</beans>
