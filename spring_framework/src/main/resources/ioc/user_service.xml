@@ -13,8 +13,13 @@
                 <ref bean="user2"/>
                 <ref bean="user3"/>
                 <ref bean="user4"/>
+                <ref bean="user7"/>
+                <!--内部类-->
+                <bean id="user8" class="com.jrymos.spring.ioc.bean.User">
+                    <constructor-arg value="8" type="java.lang.Integer" index="0"/>
+                    <constructor-arg value="郑8" type="java.lang.String" index="1"/>
+                </bean>
             </list>
         </property>
     </bean>
-
 </beans>

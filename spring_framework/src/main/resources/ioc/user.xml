@@ -4,24 +4,29 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user1" class="com.jrymos.spring.ioc.bean.User">
+    <bean id="user1" class="com.jrymos.spring.ioc.bean.User" lazy-init="true">
         <constructor-arg value="1" type="java.lang.Integer" index="0"/>
         <constructor-arg value="刘一" type="java.lang.String" index="1"/>
     </bean>
 
-    <bean id="user2" class="com.jrymos.spring.ioc.bean.User">
+    <bean id="user2" class="com.jrymos.spring.ioc.bean.User" depends-on="user3">
         <constructor-arg value="2" index="0"/>
         <constructor-arg value="赵二" index="1"/>
     </bean>
 
-    <bean id="user3" class="com.jrymos.spring.ioc.bean.User">
+    <bean id="user3" class="com.jrymos.spring.ioc.bean.User" depends-on="user4">
         <constructor-arg value="张三" type="java.lang.String"/>
         <constructor-arg value="3" type="java.lang.Integer"/>
     </bean>
 
-    <bean id="user4" class="com.jrymos.spring.ioc.bean.User">
+    <bean id="user4" class="com.jrymos.spring.ioc.bean.User" depends-on="user7">
         <constructor-arg value="4"/>
         <constructor-arg value="李四"/>
+    </bean>
+
+    <bean id="user7" class="com.jrymos.spring.ioc.bean.UserFactory" factory-method="createInstance">
+        <constructor-arg index="0" value="7"/>
+        <constructor-arg index="1" value="吴七"/>
     </bean>
 
 </beans>
