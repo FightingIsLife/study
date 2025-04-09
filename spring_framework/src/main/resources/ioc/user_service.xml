@@ -19,6 +19,7 @@
                     <constructor-arg value="8" type="java.lang.Integer" index="0"/>
                     <constructor-arg value="郑8" type="java.lang.String" index="1"/>
                 </bean>
+                <ref bean="user9"/>
             </list>
         </property>
     </bean>

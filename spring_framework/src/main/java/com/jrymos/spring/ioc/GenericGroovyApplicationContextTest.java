@@ -20,7 +20,9 @@ public class GenericGroovyApplicationContextTest {
         GenericApplicationContext context = new GenericApplicationContext();
         new XmlBeanDefinitionReader(context).loadBeanDefinitions("ioc/user.xml");
         new GroovyBeanDefinitionReader(context).loadBeanDefinitions("ioc/user.groovy", "ioc/user_service.groovy");
+        System.out.println("-----------");
         context.refresh();
+        System.out.println("-----------");
         System.out.println(context.getBean("userService", UserService.class).getUsers());
     }
 }

@@ -37,18 +37,19 @@ public record User(Integer id, String name) implements InitializingBean, Disposa
     @Override
     public void start() {
         System.out.println(this + "\t" + "start");
+        runnings.add(this);
     }
 
     @Override
     public void stop() {
         System.out.println(this + "\t" + "stop");
-        stops.add(this);
+        runnings.remove(this);
     }
 
     @Override
     public boolean isRunning() {
-        return !stops.contains(this);
+        return runnings.contains(this);
     }
 
-    static Set<User> stops = new CopyOnWriteArraySet<>();
+    static Set<User> runnings = new CopyOnWriteArraySet<>();
 }

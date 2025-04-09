@@ -29,4 +29,8 @@
         <constructor-arg index="1" value="吴七"/>
     </bean>
 
+
+    <bean class="com.jrymos.spring.ioc.bean.UserBeanPostProcessor"/>
+    <bean class="com.jrymos.spring.ioc.bean.UserBeanFactoryPostProcessor"/>
+    <bean id="user9" class="com.jrymos.spring.ioc.bean.UserFactoryBean"/>
 </beans>
