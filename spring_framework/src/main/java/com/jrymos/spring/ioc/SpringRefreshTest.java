@@ -14,8 +14,8 @@ public class SpringRefreshTest {
     public void testSpringRefresh() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.addApplicationListener(new EarlyApplicationListener());
-        context.addBeanFactoryPostProcessor(new TestBeanFactoryProcessor());
-        context.addBeanFactoryPostProcessor(new TestBeanDefinitionRegistryPostProcessor());
+//        context.addBeanFactoryPostProcessor(new TestBeanFactoryProcessor());
+//        context.addBeanFactoryPostProcessor(new TestBeanDefinitionRegistryPostProcessor());
         context.scan(EarlyApplicationListener.class.getPackageName());
         context.refresh();
         TestInterface bean = context.getBean(TestInterface.class);
