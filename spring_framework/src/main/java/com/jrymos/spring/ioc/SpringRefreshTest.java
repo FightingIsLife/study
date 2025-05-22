@@ -5,6 +5,7 @@ import com.jrymos.spring.ioc.refresh.TestBeanDefinitionRegistryPostProcessor;
 import com.jrymos.spring.ioc.refresh.TestBeanFactoryProcessor;
 import com.jrymos.spring.ioc.refresh.ifc.TestInterface;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 
