@@ -1,0 +1,11 @@
+# Initializers
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.jrymos.spring.boot.init.SendPushApiConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+  com.jrymos.spring.boot.init.FamoEnvironmentPostProcessor
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  com.jrymos.spring.boot.init.FamoEnvironmentPostProcessor
+org.springframework.context.ApplicationListener=\
+  com.jrymos.spring.boot.init.LogbackInitializerApplicationListener
+org.springframework.boot.SpringApplicationRunListener=\
+  com.jrymos.spring.boot.init.MySpringApplicationRunListener
